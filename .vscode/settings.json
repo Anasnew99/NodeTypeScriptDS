@@ -1,0 +1,21 @@
+{
+  "cursor.autocomplete.enabled": false,
+  "cursor.inlineSuggest.enabled": false,
+  "cursor.chat.enabled": false,
+  "github.copilot.enable": {
+    "*": false
+  },
+  "editor.inlineSuggest.enabled": false,
+  "editor.suggest.showStatusBar": false,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.tabCompletion": "off",
+  "editor.wordBasedSuggestions": "off"
+}
+
