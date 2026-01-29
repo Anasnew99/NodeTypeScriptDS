@@ -9,6 +9,9 @@ class LinkedList<V=any> {
         });
 
     }
+    public getSize() {
+        return this.size;
+    }
     public addToHead(value: V) {
         const newNode = new LinkedListNode<V>(value);
         newNode.setNext(this.head.getNext()!);
@@ -42,6 +45,18 @@ class LinkedList<V=any> {
             fast = fast.getNext()!.getNext()!;
         }
         return slow!;
+    }
+    public removeNode(node: LinkedListNode<V>) {
+        let currentNode = this.head;
+        while(currentNode.getNext() !== null) {
+            if(currentNode.getNext() === node) {
+                currentNode.setNext(currentNode.getNext()!.getNext());
+                this.size--;
+                return;
+            }
+            currentNode = currentNode.getNext()!;
+        }
+        throw new Error("Node not found");
     }
     
 }
