@@ -36,7 +36,18 @@ describe('Stack', () => {
     test('should get the stack top', () => {
       const stack = new Stack<number>();
       stack.push(1);
-      expect(stack.stackTop()).toBe(1);
+      stack.push(2);
+      stack.push(3);
+      stack.push(4);
+      stack.push(5);
+      stack.push(6);
+      stack.push(7);
+      stack.push(8);
+      stack.push(9);
+      stack.push(10);
+      stack.pop();
+      expect(stack.getSize()).toBe(9);
+      expect(stack.stackTop()).toBe(9);
     }),
     test('should get the stack bottom', () => {
       const stack = new Stack<number>();
